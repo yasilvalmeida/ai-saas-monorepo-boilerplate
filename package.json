@@ -1,0 +1,30 @@
+{
+  "name": "ai-saas-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "turbo run clean",
+    "db:migrate": "turbo run db:migrate",
+    "db:generate": "turbo run db:generate"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^1.10.16",
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.3",
+    "turbo": "^1.10.16",
+    "typescript": "^5.2.2"
+  },
+  "packageManager": "npm@9.8.1",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
